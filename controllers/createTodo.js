@@ -9,7 +9,7 @@ exports.createTodo = async(req , res)  => {
     //  extract tittle and description from request body 
    const { title, description } = req.body;
    // create anew todo obj and insert teh database
-const response = await Todo.create({ title, description });
+const response = await Todo.create({ title, description ,user:req.user.id });
      
     
     // send a json reponse with aseccess flag

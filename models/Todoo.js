@@ -12,6 +12,7 @@ const todoSchema = new mongoose.Schema(
         required:true,
         maxLength:50 ,
     },
+   
     createdAt: {
         type:Date,
         required :true ,
@@ -21,7 +22,11 @@ const todoSchema = new mongoose.Schema(
         type :Date,
         require :  true ,
         default:Date.now(),
-     }
+     },
+      user:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"User"
+},
 
 }
       );

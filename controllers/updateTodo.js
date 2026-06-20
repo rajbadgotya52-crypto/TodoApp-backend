@@ -4,6 +4,7 @@ exports.updateTodo = async (req, res) => {
   try {
     const id = req.params.id.trim();
     const { title, description } = req.body;
+console.log("BODY =", req.body);
 
     console.log("PARAMS =", req.params);
 console.log("ID =", req.params.id);
